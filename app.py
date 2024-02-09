@@ -15,7 +15,6 @@ x_train_count = v.fit_transform(x_train.values)
 model = MultinomialNB()
 model.fit(x_train_count,y_train)
 x_test_counts = v.transform(x_test)
-model.score(x_test_counts,y_test)
 
 def email_checker(email):
     ec = v.transform(email)
@@ -26,10 +25,6 @@ def email_checker(email):
     elif result == 'spam':
         return "Spam"
 
-
-
-    
-     
 
 app = Flask(__name__)
 
